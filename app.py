@@ -4,7 +4,6 @@ from MIDP_Formatter_Functions import *
 from datetime import datetime
 from io import BytesIO
 import io
-from openpyxl.workbook import Workbook
 
 st.set_page_config(page_title="MIDP Validator & Formatter", layout="centered")
 st.title("MIDP Validator & Formatter")
@@ -166,9 +165,7 @@ if submitted:
 
         #Export the styled DataFrame to an Excel file
         today = datetime.today().strftime('%y%m%d')
-        
-        final_styled_df_styled.to_excel(f'{today}.xlsx', index=True)
-        
+                
         st.write("Preview")
         st.dataframe(final_styled_df_styled) 
 
