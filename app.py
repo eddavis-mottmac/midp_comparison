@@ -4,8 +4,6 @@ from MIDP_Formatter_Functions import *
 from datetime import datetime
 from io import BytesIO
 import io
-from xlsxwriter import Workbook
-
 
 st.set_page_config(page_title="MIDP Validator & Formatter", layout="centered")
 st.title("MIDP Validator & Formatter")
