@@ -1,0 +1,19 @@
+# Project-specific
+*.xlsx
+.myenv
+
+# Python / Streamlit
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.venv/
+venv/
+env/
+pip-log.txt
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea.idea/
+.vscode/
