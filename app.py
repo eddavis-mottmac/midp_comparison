@@ -49,20 +49,6 @@ def validate_columns(df: pd.DataFrame, required_cols: list[str]) -> list[str]:
     df_cols = set(df.columns)
     return [c for c in required_cols if c not in df_cols]
 
-# --- 2) Helper to export Styler to Excel in memory ---
-@st.cache_data
-def styler_to_excel_bytes(styler: pd.io.formats.style.Styler, file_name: str = "styled.xlsx") -> BytesIO:
-    """
-    Render a pandas Styler to an in-memory Excel file.
-    - Preserves styles (colors, formats).
-    - Uses openpyxl engine.
-    """
-    buffer = BytesIO()
-    # You can pass `ext='.xlsx'` if needed; default is fine.
-    styler.to_excel(buffer, engine="openpyxl")
-    buffer.seek(0)
-    return buffer
-
 
 # Function to apply styles based on conditions
 def highlight_changes(row):
